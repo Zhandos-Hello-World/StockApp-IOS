@@ -37,7 +37,7 @@ class StockHeader: UITableViewHeaderFooterView {
     }
     
     // ------------------------------
-    // MARK: - Setup views
+    // MARK: - Setup view
     // ------------------------------
     private func setupView() {
         addSubview(titleLabel)
