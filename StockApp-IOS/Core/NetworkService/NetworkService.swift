@@ -11,7 +11,7 @@ protocol NetworkService {
     func execute<T: Decodable>(with router: Router, completion: @escaping (Result<T, NetworkError>) -> Void)
 }
 
-final class Network {
+final class Network: NetworkService {
     private let session = URLSession(configuration: .default)
     
     func execute<T>(with router: Router, completion: @escaping (Result<T, NetworkError>) -> Void) where T: Decodable {

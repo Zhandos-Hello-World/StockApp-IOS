@@ -124,4 +124,13 @@ final class StockCell: UITableViewCell {
             make.trailing.equalToSuperview().inset(12)
         }
     }
+    
+    //MARK: logic methods
+    func configure(with stock: StockItemModelProtocol, index: Int) {
+        symbolLabel.text = stock.symbol
+        nameLabel.text = stock.name
+        changedLabel.text = "$0.32(4,3%)"
+        priceLabel.text = stock.price
+        starButton.isSelected = stock.isFavourite
+    }
 }
